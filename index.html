@@ -1,1 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Cup — Where the Deep Meets the Cup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600;700;900&family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+  <!-- CANVAS LAYERS -->
+  <canvas id="ocean-bg"></canvas>
+  <canvas id="fish-canvas"></canvas>
+  <canvas id="bubble-canvas"></canvas>
+
+  <!-- CAUSTIC LIGHT RAYS -->
+  <div id="caustics"></div>
+
+  <!-- KELP -->
+  <div id="kelp-layer"></div>
+
+  <!-- JELLYFISH -->
+  <div id="jelly-layer"></div>
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="nav">
+    <div class="nav-logo">Ocean <span>Cup</span></div>
+    <ul class="nav-links" id="navl">
+      <li><a href="#about">About</a></li>
+      <li><a href="#signatures">Drinks</a></li>
+      <li><a href="#depth-journey">Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#atmos">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-ocean"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="shimmer-wrap" id="shimmer-wrap"></div>
+
+    <!-- Depth meter -->
+    <div class="depth-meter">
+      <div class="depth-bar"></div>
+      <div class="depth-labels">
+        <span>Surface</span>
+        <span>200m</span>
+        <span>Twilight</span>
+        <span>Abyss</span>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">Est. 2020 · Ocean Cup Café</div>
+      <h1 class="hero-title">
+        <span class="t1">OCEAN</span>
+        <span class="t2">Cup</span>
+      </h1>
+      <p class="hero-sub">Where every sip carries the soul of the sea — dive into flavours born from the deep blue.</p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn-primary"><span>🌊 Explore Menu</span></a>
+        <a href="#contact" class="btn-ghost">Reserve a Table</a>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <p>Dive In</p>
+      <div class="scroll-mouse"></div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span class="tick-item"><span>🌊</span>Artisan Coffee</span>
+      <span class="tick-item"><span>🐠</span>Ocean Themed</span>
+      <span class="tick-item"><span>🐚</span>Fresh Daily</span>
+      <span class="tick-item"><span>🦑</span>Deep Flavours</span>
+      <span class="tick-item"><span>🐬</span>Good Vibes</span>
+      <span class="tick-item"><span>🪸</span>Coral Lounge</span>
+      <span class="tick-item"><span>⚓</span>Seaside Soul</span>
+      <span class="tick-item"><span>🐡</span>OC Signature</span>
+      <span class="tick-item"><span>🌊</span>Artisan Coffee</span>
+      <span class="tick-item"><span>🐠</span>Ocean Themed</span>
+      <span class="tick-item"><span>🐚</span>Fresh Daily</span>
+      <span class="tick-item"><span>🦑</span>Deep Flavours</span>
+      <span class="tick-item"><span>🐬</span>Good Vibes</span>
+      <span class="tick-item"><span>🪸</span>Coral Lounge</span>
+      <span class="tick-item"><span>⚓</span>Seaside Soul</span>
+      <span class="tick-item"><span>🐡</span>OC Signature</span>
+    </div>
+  </div>
+
+  <div class="wave-sep"><svg viewBox="0 0 1440 55" fill="none"><path d="M0,30 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,55 L0,55 Z" fill="#03192e"/></svg></div>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section-wrap">
+    <div class="sand-ripples"><div class="sand-ripple"></div><div class="sand-ripple"></div><div class="sand-ripple"></div><div class="sand-ripple"></div></div>
+    <div class="about-inner">
+      <div class="rvl">
+        <div class="sec-label">Who We Are</div>
+        <h2 class="sec-title">A Deep-Sea Escape <em>in Every Sip</em></h2>
+        <p class="body-p">At Ocean Cup, we didn't just open a café — we built an underwater world. Inspired by the infinite depth, mystery, and beauty of the ocean, every element is crafted to transport you far below the surface.</p>
+        <p class="body-p">Our baristas are storytellers. Every cup poured is a wave, every dish a tidal journey. We source the finest beans from coastal highlands and brew with the precision of deep-sea currents.</p>
+        <div class="about-feats">
+          <div class="feat"><div class="feat-ico">🌿</div><div class="feat-t">Farm to Cup</div><div class="feat-d">Single-origin beans from coastal highland farms worldwide.</div></div>
+          <div class="feat"><div class="feat-ico">🌊</div><div class="feat-t">Ocean Ambience</div><div class="feat-d">Fully immersive underwater interior — you feel the depth.</div></div>
+          <div class="feat"><div class="feat-ico">🍽️</div><div class="feat-t">OC Kitchen</div><div class="feat-d">Full signature menu from omelettes to gourmet creations.</div></div>
+          <div class="feat"><div class="feat-ico">🐚</div><div class="feat-t">Daily Fresh</div><div class="feat-d">Every ingredient sourced fresh each morning like the tide.</div></div>
+        </div>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-n">50+</div><div class="stat-l">Menu Items</div></div>
+          <div class="stat"><div class="stat-n">5★</div><div class="stat-l">Rated</div></div>
+          <div class="stat"><div class="stat-n">10K+</div><div class="stat-l">Guests</div></div>
+        </div>
+      </div>
+      <div class="about-orb-wrap rvr">
+        <div class="orb">
+          <div class="orb-inner-glow"></div>
+          <div class="orb-cup">☕</div>
+        </div>
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <div class="orbit-creature" style="--or:190px;--ot:12s;--od:0s;">🐠</div>
+        <div class="orbit-creature" style="--or:190px;--ot:12s;--od:-4s;">🐚</div>
+        <div class="orbit-creature" style="--or:190px;--ot:12s;--od:-8s;">🌊</div>
+        <div class="orbit-creature" style="--or:250px;--ot:18s;--od:-2s;">🐬</div>
+        <div class="orbit-creature" style="--or:250px;--ot:18s;--od:-9s;">🪸</div>
+        <div class="orb-badge"><div class="orb-badge-n">5★</div><div class="orb-badge-t">Top Rated<br>Ocean Café</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CREATURES ═══ -->
+  <section id="creatures" class="section-wrap">
+    <div class="creatures-header rv">
+      <div class="sec-label" style="justify-content:center;">Our Underwater Neighbours</div>
+      <h2 class="sec-title" style="text-align:center;">The Ocean <em>Inspires Us</em></h2>
+      <p class="body-p" style="text-align:center;max-width:540px;margin:0 auto;">Every creature of the deep has shaped our menu, our design, and our soul.</p>
+    </div>
+    <div class="creatures-grid rv">
+      <div class="creature-card" style="--cs:4s;--cd:0s;">
+        <span class="creature-emoji">🐠</span>
+        <div class="creature-name">Clownfish</div>
+        <div class="creature-desc">Bright & bold — like our Tiramisu Latte, impossible to ignore.</div>
+      </div>
+      <div class="creature-card" style="--cs:5s;--cd:.5s;">
+        <span class="creature-emoji">🐬</span>
+        <div class="creature-name">Dolphin</div>
+        <div class="creature-desc">Playful intelligence — the spirit of our barista team.</div>
+      </div>
+      <div class="creature-card" style="--cs:3.5s;--cd:1s;">
+        <span class="creature-emoji">🪸</span>
+        <div class="creature-name">Coral</div>
+        <div class="creature-desc">Our walls, our colours, our community — built together.</div>
+      </div>
+      <div class="creature-card" style="--cs:6s;--cd:.3s;">
+        <span class="creature-emoji">🦑</span>
+        <div class="creature-name">Octopus</div>
+        <div class="creature-desc">Multifaceted genius — like our OC Signature kitchen.</div>
+      </div>
+      <div class="creature-card" style="--cs:4.5s;--cd:.8s;">
+        <span class="creature-emoji">🐋</span>
+        <div class="creature-name">Blue Whale</div>
+        <div class="creature-desc">Grand, majestic, unhurried — take your time here.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-sep"><svg viewBox="0 0 1440 55" fill="none"><path d="M0,30 C360,5 720,55 1080,30 C1260,14 1380,40 1440,30 L1440,55 L0,55 Z" fill="#03192e"/></svg></div>
+
+  <!-- ═══ SIGNATURES ═══ -->
+  <section id="signatures" class="section-wrap">
+    <div class="sig-header rv">
+      <div class="sec-label" style="justify-content:center;">Our Masterpieces</div>
+      <h2 class="sec-title" style="text-align:center;">Signature <em>Oceanic Brews</em></h2>
+      <p class="body-p" style="text-align:center;max-width:560px;margin:0 auto;">Each drink is named after ocean phenomena — not just to taste, but to feel like the sea.</p>
+    </div>
+    <div class="sig-grid">
+      <div class="sig-card feat-sig rv" style="--sf:4s;--sd:0s;">
+        <div class="feat-sig-badge">⭐ Chef's Pick</div>
+        <span class="sig-emoji">🌊</span>
+        <div class="sig-name">The <em>Blue Tide</em></div>
+        <div class="sig-bar"></div>
+        <div class="sig-desc">Our crown jewel — Blue Matcha ceremonially blended with oat milk, butterfly pea flower, and a hint of vanilla salt. Visually breathtaking.</div>
+        <div class="sig-chips"><span class="chip">Blue Matcha</span><span class="chip">Butterfly Pea</span><span class="chip">Oat Milk</span><span class="chip">Vanilla Salt</span><span class="chip">Cold</span></div>
+        <div class="sig-price">PKR 750</div>
+      </div>
+      <div class="sig-card rv" style="--sf:5s;--sd:.4s;">
+        <span class="sig-emoji">🌀</span>
+        <div class="sig-name">Whirlpool <em>Walnut Latte</em></div>
+        <div class="sig-bar"></div>
+        <div class="sig-desc">A hypnotic spiral of walnut syrup dropped into rich espresso and steamed milk — inspired by ocean vortices.</div>
+        <div class="sig-chips"><span class="chip">Walnut</span><span class="chip">Espresso</span><span class="chip">Hot/Cold</span></div>
+        <div class="sig-price">PKR 1,340</div>
+      </div>
+      <div class="sig-card rv" style="--sf:4.5s;--sd:.8s;">
+        <span class="sig-emoji">🌸</span>
+        <div class="sig-name">Coral <em>Strawberry Matcha</em></div>
+        <div class="sig-bar"></div>
+        <div class="sig-desc">The vibrant red of deep-sea coral meets the earthiness of Japanese matcha — a collision of worlds in one glass.</div>
+        <div class="sig-chips"><span class="chip">Matcha</span><span class="chip">Strawberry</span><span class="chip">Iced</span></div>
+        <div class="sig-price">PKR 570</div>
+      </div>
+      <div class="sig-card rv" style="--sf:3.8s;--sd:.2s;">
+        <span class="sig-emoji">🌅</span>
+        <div class="sig-name">Sunrise <em>at Ocean</em></div>
+        <div class="sig-bar"></div>
+        <div class="sig-desc">Layers of citrus, passionfruit, and mango ombré — watching the sun rise over still water in a glass.</div>
+        <div class="sig-chips"><span class="chip">Citrus</span><span class="chip">Mango</span><span class="chip">Passionfruit</span></div>
+        <div class="sig-price">PKR 420</div>
+      </div>
+      <div class="sig-card rv" style="--sf:5.5s;--sd:.6s;">
+        <span class="sig-emoji">🫧</span>
+        <div class="sig-name">Abyss <em>Dark Ocean</em></div>
+        <div class="sig-bar"></div>
+        <div class="sig-desc">As deep and mysterious as the midnight zone — cold brew steeped 24 hours, served over sculpted ice.</div>
+        <div class="sig-chips"><span class="chip">Cold Brew</span><span class="chip">Dark</span><span class="chip">Iced</span></div>
+        <div class="sig-price">PKR 460</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-sep" style="transform:rotate(180deg);margin-top:-2px;"><svg viewBox="0 0 1440 55" fill="none"><path d="M0,30 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,55 L0,55 Z" fill="#020c17"/></svg></div>
+
+  <!-- ═══ DEPTH JOURNEY ═══ -->
+  <section id="depth-journey" class="section-wrap">
+    <div class="dj-bg"></div>
+    <div class="dj-header rv">
+      <div class="sec-label" style="justify-content:center;">How It Began</div>
+      <h2 class="sec-title" style="text-align:center;">Diving into <em>Our Story</em></h2>
+      <p class="body-p" style="text-align:center;max-width:520px;margin:0 auto;">Three friends, one dream, and an obsession with the ocean's boundless beauty.</p>
+    </div>
+    <div class="dj-timeline">
+      <div class="dj-line"></div>
+      <div class="dj-step">
+        <div class="dj-content rvl">
+          <div class="dj-depth">Surface · 2019</div>
+          <div class="dj-title">A Dream on a Beach Napkin</div>
+          <div class="dj-text">It started with a sketch — a café that felt like being underwater. Our founders wanted guests to hear the ocean, feel it in the light, and taste it in every sip.</div>
+        </div>
+        <div class="dj-node">🌊</div>
+        <div class="dj-vis rv">🗺️</div>
+      </div>
+      <div class="dj-step">
+        <div class="dj-vis rv">🏗️</div>
+        <div class="dj-node">⚓</div>
+        <div class="dj-content rvr">
+          <div class="dj-depth">200m Deep · 2020</div>
+          <div class="dj-title">Constructing the Abyss</div>
+          <div class="dj-text">Every tile, every fixture, every menu word was chosen to transport guests below the surface. Our designer dove 20 metres into the sea for inspiration.</div>
+        </div>
+      </div>
+      <div class="dj-step">
+        <div class="dj-content rvl">
+          <div class="dj-depth">The Twilight Zone · 2020</div>
+          <div class="dj-title">The Tide Comes In</div>
+          <div class="dj-text">We opened on World Ocean Day. The line stretched around the block. Within a week, Ocean Cup was the most talked-about new café in the city.</div>
+        </div>
+        <div class="dj-node">🎉</div>
+        <div class="dj-vis rv">🎊</div>
+      </div>
+      <div class="dj-step">
+        <div class="dj-vis rv">🌟</div>
+        <div class="dj-node">☕</div>
+        <div class="dj-content rvr">
+          <div class="dj-depth">The Abyss · Today</div>
+          <div class="dj-title">Still Riding the Current</div>
+          <div class="dj-text">Five years on, the ocean still inspires every decision. New menu items emerge like species from the deep, and our community grows — wave by wave.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-sep"><svg viewBox="0 0 1440 55" fill="none"><path d="M0,25 C200,50 400,5 600,30 C800,55 1000,5 1200,30 C1300,42 1380,15 1440,25 L1440,55 L0,55 Z" fill="#03192e"/></svg></div>
+
+  <!-- ═══ MENU ═══ -->
+  <section id="menu" class="section-wrap">
+    <div class="menu-header rv">
+      <div class="sec-label" style="justify-content:center;">Full Offering</div>
+      <h2 class="sec-title" style="text-align:center;">The Ocean Cup <em>Menu</em></h2>
+    </div>
+    <div class="menu-tabs">
+      <button class="mtab on" data-tab="drinks">🌊 Beverages</button>
+      <button class="mtab" data-tab="oc">⭐ OC Signature</button>
+      <button class="mtab" data-tab="desserts">🍰 Desserts</button>
+    </div>
+
+    <div class="msec on" id="tab-drinks">
+      <div class="mcat"><span class="mcat-ico">☕</span> Caffeinated Ocean</div>
+      <div class="mgrid">
+        <div class="mitem"><div><div class="mitem-name">Espresso</div><div class="mitem-sub">Pure, intense, timeless</div></div><div class="mitem-price">490</div></div>
+        <div class="mitem"><div><div class="mitem-name">Long Black / Americano</div><div class="mitem-sub">Deep and dark like the ocean floor</div></div><div class="mitem-price">540</div></div>
+        <div class="mitem"><div><div class="mitem-name">Cortado</div><div class="mitem-sub">Equal parts espresso & steamed milk</div></div><div class="mitem-price">660</div></div>
+        <div class="mitem"><div><div class="mitem-name">Cappuccino</div><div class="mitem-sub">Velvet foam like ocean seafoam</div></div><div class="mitem-price">660</div></div>
+        <div class="mitem"><div><div class="mitem-name">Latte</div><div class="mitem-sub">Hot or Cold — silky & smooth</div></div><div class="mitem-price">720 / 760</div></div>
+        <div class="mitem"><div><div class="mitem-name">Spanish Latte</div><div class="mitem-sub">Condensed milk meets espresso</div></div><div class="mitem-price">720 / 760</div></div>
+        <div class="mitem"><div><div class="mitem-name">Bing Hot/Cold</div><div class="mitem-sub">A brewed classic with depth</div></div><div class="mitem-price">810</div></div>
+      </div>
+      <div class="mcat"><span class="mcat-ico">🌊</span> Ocean Indulgence Lattes</div>
+      <div class="mgrid">
+        <div class="mitem"><div><div class="mitem-name">Tiramisu Latte</div><div class="mitem-sub">Italian soul meets oceanic warmth</div></div><div class="mitem-price">1300</div></div>
+        <div class="mitem"><div><div class="mitem-name">Apple Pie Latte</div><div class="mitem-sub">Autumn spice in a sea of milk</div></div><div class="mitem-price">1300</div></div>
+        <div class="mitem"><div><div class="mitem-name">Walnut Brownie Latte</div><div class="mitem-sub">Rich, nutty, deeply satisfying</div></div><div class="mitem-price">1340</div></div>
+      </div>
+      <div class="mcat"><span class="mcat-ico">⭐</span> Ocean's Special</div>
+      <div class="mgrid">
+        <div class="mitem"><div><div class="mitem-name">Cinnamon Latte</div><div class="mitem-sub">Hot or Cold · warm spice in cool depths</div></div><div class="mitem-price">760 / 780</div></div>
+        <div class="mitem"><div><div class="mitem-name">Tiramisu Latte</div><div class="mitem-sub">Hot or Cold · indulgent delight</div></div><div class="mitem-price">760 / 780</div></div>
+        <div class="mitem"><div><div class="mitem-name">Apple Pie Latte</div><div class="mitem-sub">Hot or Cold · comforting harvest</div></div><div class="mitem-price">760 / 780</div></div>
+        <div class="mitem"><div><div class="mitem-name">Walnut Brownie Latte</div><div class="mitem-sub">Hot or Cold · midnight richness</div></div><div class="mitem-price">760 / 780</div></div>
+        <div class="mitem"><div><div class="mitem-name">Hot Chocolate</div><div class="mitem-sub">Pure cocoa, velvety warmth</div></div><div class="mitem-price">850</div></div>
+        <div class="mitem"><div><div class="mitem-name">Filter Chocolate</div><div class="mitem-sub">Slow-brewed chocolatey depth</div></div><div class="mitem-price">850</div></div>
+        <div class="mitem"><div><div class="mitem-name">Creamy Hot Chocolate</div><div class="mitem-sub">Extra cream, extra cloud</div></div><div class="mitem-price">740</div></div>
+        <div class="mitem"><div><div class="mitem-name">Pistachio Frappe</div><div class="mitem-sub">Green as the shallow sea</div></div><div class="mitem-price">890</div></div>
+        <div class="mitem"><div><div class="mitem-name">Lotus Frappe</div><div class="mitem-sub">Caramelised biscuit, frozen wave</div></div><div class="mitem-price">890</div></div>
+        <div class="mitem"><div><div class="mitem-name">Caramel Popcorn Frappe</div><div class="mitem-sub">Sweet, salty, surf's up</div></div><div class="mitem-price">890</div></div>
+        <div class="mitem"><div><div class="mitem-name">Mocha Frappe</div><div class="mitem-sub">Chocolate-espresso tidal fusion</div></div><div class="mitem-price">890</div></div>
+      </div>
+      <div class="mcat"><span class="mcat-ico">🌿</span> Ocean's Herbs</div>
+      <div class="mgrid">
+        <div class="mitem"><div><div class="mitem-name">Mocha Hot/Cold</div><div class="mitem-sub">Espresso kissed with dark chocolate</div></div><div class="mitem-price">750</div></div>
+        <div class="mitem"><div><div class="mitem-name">Blue Matcha</div><div class="mitem-sub">Our ocean in a cup — butterfly pea flower</div></div><div class="mitem-price">750</div></div>
+        <div class="mitem"><div><div class="mitem-name">Strawberry Matcha</div><div class="mitem-sub">Coral reef in every layer</div></div><div class="mitem-price">570</div></div>
+        <div class="mitem"><div><div class="mitem-name">Chai Latte</div><div class="mitem-sub">Ancient spice, ocean mist warmth</div></div><div class="mitem-price">570</div></div>
+      </div>
+      <div class="mcat"><span class="mcat-ico">🧊</span> Chilled Ocean</div>
+      <div class="mgrid">
+        <div class="mitem"><div><div class="mitem-name">Citrus Water</div><div class="mitem-sub">Strawberry · Mango · Peach · Watermelon</div></div><div class="mitem-price">580</div></div>
+        <div class="mitem"><div><div class="mitem-name">Lemon Mango Fresh</div><div class="mitem-sub">Tropical current in a glass</div></div><div class="mitem-price">460</div></div>
+        <div class="mitem"><div><div class="mitem-name">Signature Dark Ocean</div><div class="mitem-sub">Mystery of the deep in every sip</div></div><div class="mitem-price">460</div></div>
+        <div class="mitem"><div><div class="mitem-name">Passionberry</div><div class="mitem-sub">Passionfruit meets wild berries</div></div><div class="mitem-price">420</div></div>
+        <div class="mitem"><div><div class="mitem-name">Sunrise at Ocean</div><div class="mitem-sub">Golden dawn over still water</div></div><div class="mitem-price">420</div></div>
+      </div>
+    </div>
+
+    <div class="msec" id="tab-oc">
+      <div class="mcat"><span class="mcat-ico">🍳</span> Most Trendy Omelette</div>
+      <div class="mgrid">
+        <div class="mitem"><div><div class="mitem-name">Greasy Skillet / Fake Classic</div><div class="mitem-sub">Chicken 1099 / 1250 · Ocean Cup's iconic plate</div></div><div class="mitem-price">990+</div></div>
+        <div class="mitem"><div><div class="mitem-name">Fajita Taco's Chicken / Beef</div><div class="mitem-sub">Smoky, spiced & wrapped in perfection</div></div><div class="mitem-price">790 / 899</div></div>
+        <div class="mitem"><div><div class="mitem-name">Almond Crust Pecans</div><div class="mitem-sub">A nutty crust on a silky filling</div></div><div class="mitem-price">1099+</div></div>
+      </div>
+      <div class="mcat"><span class="mcat-ico">🐟</span> Mains & Plates</div>
+      <div class="mgrid">
+        <div class="mitem"><div><div class="mitem-name">Injected Fish & Chips</div><div class="mitem-sub">Ocean's finest, golden and crisp</div></div><div class="mitem-price">1050+</div></div>
+        <div class="mitem"><div><div class="mitem-name">Authentic Alfredo Pasta</div><div class="mitem-sub">Creamy Italian tradition, ocean twist</div></div><div class="mitem-price">1299+</div></div>
+        <div class="mitem"><div><div class="mitem-name">OC Signature Swiss Mushroom Melt</div><div class="mitem-sub">Umami-rich, ocean-depth flavour</div></div><div class="mitem-price">980+</div></div>
+      </div>
+      <div class="mcat"><span class="mcat-ico">🍔</span> Burgers & Sandwiches</div>
+      <div class="mgrid">
+        <div class="mitem"><div><div class="mitem-name">Chicken Burger</div><div class="mitem-sub">Juicy, stacked, surf-ready</div></div><div class="mitem-price">799+</div></div>
+        <div class="mitem"><div><div class="mitem-name">OC Classic Sandwich with Fries</div><div class="mitem-sub">The timeless tide on a plate</div></div><div class="mitem-price">899+</div></div>
+        <div class="mitem"><div><div class="mitem-name">OC Blue Sandwich with Fries</div><div class="mitem-sub">Our deep blue signature creation</div></div><div class="mitem-price">990+</div></div>
+      </div>
+    </div>
+
+    <div class="msec" id="tab-desserts">
+      <div class="mcat"><span class="mcat-ico">🍰</span> Sweet Shores</div>
+      <div class="mgrid">
+        <div class="mitem"><div><div class="mitem-name">Royal Matilda Cake</div><div class="mitem-sub">Rich layers fit for an ocean queen</div></div><div class="mitem-price">790</div></div>
+        <div class="mitem"><div><div class="mitem-name">Nutella Croix with Bear</div><div class="mitem-sub">Flaky, chocolatey, adorable</div></div><div class="mitem-price">800</div></div>
+        <div class="mitem"><div><div class="mitem-name">Lotus Biscoff</div><div class="mitem-sub">Caramel waves on a spiced biscuit shore</div></div><div class="mitem-price">800</div></div>
+        <div class="mitem"><div><div class="mitem-name">OC Signature Pistachio Crepe</div><div class="mitem-sub">Delicate as coral, rich as the deep</div></div><div class="mitem-price">950</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SPECIALS ═══ -->
+  <section id="specials" class="section-wrap">
+    <div class="specials-header rv">
+      <div class="sec-label" style="justify-content:center;">Don't Miss</div>
+      <h2 class="sec-title" style="text-align:center;">Ocean Cup <em>Specials</em></h2>
+    </div>
+    <div class="specials-grid rv">
+      <div class="spec-card" style="--sf2:4s;--sd2:0s;"><div class="spec-ico-wrap">🌀</div><div><div class="spec-badge badge-hot">🔥 Most Ordered</div><div class="spec-name">Whirlpool Walnut Latte</div><div class="spec-desc">Our most photographed drink — walnut spiral in rich espresso that hypnotises as you drink it.</div><div class="spec-footer"><div class="spec-price">PKR 1,340</div><div class="spec-tag">· Hot or Iced</div></div></div></div>
+      <div class="spec-card" style="--sf2:5s;--sd2:.3s;"><div class="spec-ico-wrap">🐠</div><div><div class="spec-badge badge-new">✨ New</div><div class="spec-name">OC Blue Sandwich</div><div class="spec-desc">Limited creation — ocean-spiced fillings in blue-tinted sourdough with our house sauce.</div><div class="spec-footer"><div class="spec-price">PKR 990+</div><div class="spec-tag">· Served with Fries</div></div></div></div>
+      <div class="spec-card" style="--sf2:4.5s;--sd2:.6s;"><div class="spec-ico-wrap">🌸</div><div><div class="spec-badge badge-sea">🌿 Seasonal</div><div class="spec-name">Coral Strawberry Matcha</div><div class="spec-desc">Spring seasonal — vivid layers of strawberry purée meeting ceremonial matcha over ice.</div><div class="spec-footer"><div class="spec-price">PKR 570</div><div class="spec-tag">· Cold Only</div></div></div></div>
+      <div class="spec-card" style="--sf2:3.8s;--sd2:.2s;"><div class="spec-ico-wrap">🎂</div><div><div class="spec-badge badge-new">✨ New</div><div class="spec-name">OC Pistachio Crepe</div><div class="spec-desc">Thin golden crepes over pistachio cream filling with a caramelised sugar finish. Pure elegance.</div><div class="spec-footer"><div class="spec-price">PKR 950</div><div class="spec-tag">· Dessert</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- ═══ AQUARIUM ═══ -->
+  <section id="aquarium" class="section-wrap">
+    <div class="aq-header rv">
+      <div class="sec-label" style="justify-content:center;">Living Decor</div>
+      <h2 class="sec-title" style="text-align:center;">Our Living <em>Aquarium Wall</em></h2>
+      <p class="body-p" style="text-align:center;max-width:520px;margin:0 auto 50px;">Step inside and watch our floor-to-ceiling aquarium — the heartbeat of Ocean Cup.</p>
+    </div>
+    <div class="aq-tank">
+      <div class="aq-surface"></div>
+      <!-- Light rays -->
+      <div class="aq-ray" style="left:10%;height:300px;--ar:-8deg;--ard:0s;--arr:-8deg;animation-duration:5s;"></div>
+      <div class="aq-ray" style="left:25%;height:250px;--arr:-5deg;--ard:.8s;animation-duration:7s;"></div>
+      <div class="aq-ray" style="left:45%;height:320px;--arr:3deg;--ard:1.5s;animation-duration:6s;"></div>
+      <div class="aq-ray" style="left:65%;height:280px;--arr:-4deg;--ard:.3s;animation-duration:8s;"></div>
+      <div class="aq-ray" style="left:80%;height:260px;--arr:6deg;--ard:2s;animation-duration:5.5s;"></div>
+      <!-- Corals -->
+      <div class="aq-coral" style="left:5%;--cs2:3.5rem;--cd2:4s;--cdl2:0s;">🪸</div>
+      <div class="aq-coral" style="left:18%;--cs2:2rem;--cd2:5s;--cdl2:.5s;">🌿</div>
+      <div class="aq-coral" style="left:35%;--cs2:2.8rem;--cd2:3.5s;--cdl2:1s;">🪸</div>
+      <div class="aq-coral" style="left:50%;--cs2:2rem;--cd2:6s;--cdl2:.2s;">🌿</div>
+      <div class="aq-coral" style="left:65%;--cs2:3rem;--cd2:4.5s;--cdl2:.8s;">🪸</div>
+      <div class="aq-coral" style="left:80%;--cs2:2.5rem;--cd2:5.5s;--cdl2:1.5s;">🌿</div>
+      <div class="aq-coral" style="right:3%;--cs2:3rem;--cd2:4s;--cdl2:.4s;">🪸</div>
+      <!-- Fish -->
+      <div class="aq-fish" style="--fs:2rem;--fd:8s;--fdd:0s;--ft:25%;--ft2:35%;">🐠</div>
+      <div class="aq-fish" style="--fs:1.5rem;--fd:12s;--fdd:-3s;--ft:50%;--ft2:40%;">🐟</div>
+      <div class="aq-fish" style="--fs:2.5rem;--fd:15s;--fdd:-7s;--ft:60%;--ft2:55%;">🐡</div>
+      <div class="aq-fish" style="--fs:1.2rem;--fd:9s;--fdd:-4s;--ft:30%;--ft2:45%;">🐠</div>
+      <div class="aq-fish" style="--fs:3rem;--fd:20s;--fdd:-10s;--ft:45%;--ft2:35%;">🐟</div>
+      <!-- Bubbles -->
+      <div class="aq-bub" style="left:15%;--bw:8px;--bd:4s;--bdl:0s;"></div>
+      <div class="aq-bub" style="left:30%;--bw:5px;--bd:5s;--bdl:.8s;"></div>
+      <div class="aq-bub" style="left:50%;--bw:10px;--bd:6s;--bdl:1.5s;"></div>
+      <div class="aq-bub" style="left:70%;--bw:6px;--bd:4.5s;--bdl:.3s;"></div>
+      <div class="aq-bub" style="left:85%;--bw:8px;--bd:7s;--bdl:2s;"></div>
+      <!-- Sand -->
+      <div class="aq-sand"></div>
+      <div class="aq-pebble" style="left:8%;width:12px;height:8px;"></div>
+      <div class="aq-pebble" style="left:20%;width:8px;height:6px;"></div>
+      <div class="aq-pebble" style="left:40%;width:14px;height:9px;"></div>
+      <div class="aq-pebble" style="left:60%;width:10px;height:7px;"></div>
+      <div class="aq-pebble" style="left:75%;width:16px;height:10px;"></div>
+      <div class="aq-pebble" style="right:10%;width:9px;height:6px;"></div>
+    </div>
+  </section>
+
+  <!-- ═══ ATMOSPHERE ═══ -->
+  <section id="atmos" class="section-wrap">
+    <div class="atmos-inner">
+      <div class="rvl">
+        <div class="sec-label">The Space</div>
+        <h2 class="sec-title">An Underwater <em>World</em></h2>
+        <p class="body-p">Step through the door and you're no longer in the city. You're forty metres below the surface, surrounded by the hum of ocean currents, shimmer of bioluminescent light, and the quiet that only the deep sea knows.</p>
+        <p class="body-p">Our interior was designed by an ocean-obsessed architect who studied underwater photography, coral formations, and deep-sea colour palettes. The result is a space that breathes — shifting its mood with the light, like the sea itself.</p>
+        <div class="pillars">
+          <div class="pillar"><div class="pillar-ico">🪸</div><div><h4>Coral Accents</h4><p>Hand-crafted resin coral formations line the walls — no two the same, just like the reef.</p></div></div>
+          <div class="pillar"><div class="pillar-ico">💡</div><div><h4>Bioluminescent Lighting</h4><p>Dynamic LEDs shift from dawn-gold to midnight-blue throughout the day, simulating ocean depth.</p></div></div>
+          <div class="pillar"><div class="pillar-ico">🎵</div><div><h4>Ocean Soundscape</h4><p>Curated ambient audio — distant whale songs, gentle waves, and the chorus of the reef.</p></div></div>
+          <div class="pillar"><div class="pillar-ico">🌡️</div><div><h4>Cool & Calm</h4><p>Temperature and humidity kept at coastal comfort — a genuine escape from the heat outside.</p></div></div>
+        </div>
+      </div>
+      <div class="mosaic rvr">
+        <div class="moss" style="--mf:4s;--md:0s;"><div class="moss-glow"></div><span class="moss-emoji">🌊</span><div class="moss-lbl">Wave Lounge</div></div>
+        <div class="moss" style="--mf:5s;--md:.5s;"><div class="moss-glow"></div><span class="moss-emoji">🪸</span><div class="moss-lbl">Coral Wall</div></div>
+        <div class="moss" style="--mf:3.5s;--md:1s;"><div class="moss-glow"></div><span class="moss-emoji">🐠</span><div class="moss-lbl">Marine Life</div></div>
+        <div class="moss" style="--mf:4.5s;--md:.3s;"><div class="moss-glow"></div><span class="moss-emoji">💡</span><div class="moss-lbl">Blue Light</div></div>
+        <div class="moss" style="--mf:5.5s;--md:.8s;"><div class="moss-glow"></div><span class="moss-emoji">☕</span><div class="moss-lbl">The Bar</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FACTS ═══ -->
+  <section id="facts" class="section-wrap">
+    <div class="rv" style="text-align:center;margin-bottom:60px;">
+      <div class="sec-label" style="justify-content:center;">Did You Know?</div>
+      <h2 class="sec-title" style="text-align:center;">Ocean <em>Inspirations</em></h2>
+    </div>
+    <div class="facts-grid rv">
+      <div class="fact-card"><span class="fact-big" style="--ff:5s;--ffd:0s;">🌊</span><h3>The Deep Blue</h3><p>Our signature blues mirror Rayleigh scattering that gives deep ocean water its mesmerising colour — physics you can drink.</p></div>
+      <div class="fact-card"><span class="fact-big" style="--ff:4s;--ffd:.5s;">🦋</span><h3>Butterfly Pea Magic</h3><p>The blue pigment in our Blue Matcha naturally changes colour with pH — add lemon and watch it turn purple like a sea sunset.</p></div>
+      <div class="fact-card"><span class="fact-big" style="--ff:6s;--ffd:1s;">🐬</span><h3>Dolphin Intuition</h3><p>Like dolphins, our baristas communicate through flow and intuition — a choreography perfected over thousands of cups.</p></div>
+      <div class="fact-card"><span class="fact-big" style="--ff:4.5s;--ffd:.3s;">🪸</span><h3>Coral Communities</h3><p>Reefs cover 1% of the ocean but support 25% of all marine life. We aim to be that 1% in your daily routine — small but vital.</p></div>
+    </div>
+  </section>
+
+  <!-- ═══ REVIEWS ═══ -->
+  <section id="reviews" class="section-wrap">
+    <div class="rv" style="text-align:center;margin-bottom:60px;">
+      <div class="sec-label" style="justify-content:center;">Guest Voices</div>
+      <h2 class="sec-title" style="text-align:center;">Words from <em>the Shore</em></h2>
+    </div>
+    <div class="reviews-grid rv">
+      <div class="rev-card"><div class="rev-q">"</div><div class="rev-stars">★★★★★</div><div class="rev-text">The Blue Matcha was unlike anything I'd ever tasted. The whole café felt like I'd stepped into a dream. The lighting, the sound, the temperature — I stayed three hours and didn't want to leave.</div><div class="rev-author"><div class="rev-av">🌊</div><div><div class="rev-name">Sara A.</div><div class="rev-loc">Regular Guest</div></div></div></div>
+      <div class="rev-card"><div class="rev-q">"</div><div class="rev-stars">★★★★★</div><div class="rev-text">The OC Signature Swiss Mushroom Melt is a masterpiece. Paired with the Walnut Brownie Latte and I was completely transported. Ocean Cup doesn't just serve food — it serves experiences.</div><div class="rev-author"><div class="rev-av">🐠</div><div><div class="rev-name">Khalid M.</div><div class="rev-loc">Food Blogger</div></div></div></div>
+      <div class="rev-card"><div class="rev-q">"</div><div class="rev-stars">★★★★★</div><div class="rev-text">Brought my whole family for brunch — from my 8-year-old to my 70-year-old father — every single person was blown away. The fish and chips tasted like the ocean itself.</div><div class="rev-author"><div class="rev-av">🐚</div><div><div class="rev-name">Aisha K.</div><div class="rev-loc">Family Visit</div></div></div></div>
+    </div>
+  </section>
+
+  <div class="wave-sep" style="transform:rotate(180deg);margin-top:-2px;"><svg viewBox="0 0 1440 55" fill="none"><path d="M0,30 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,55 L0,55 Z" fill="#03192e"/></svg></div>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section-wrap">
+    <div class="rv" style="text-align:center;margin-bottom:60px;">
+      <div class="sec-label" style="justify-content:center;">Come Dive With Us</div>
+      <h2 class="sec-title" style="text-align:center;">Visit <em>Ocean Cup</em></h2>
+    </div>
+    <div class="contact-inner">
+      <div class="rvl">
+        <div class="cinfo"><div class="cico">📍</div><div><div class="clabel">Location</div><div class="cval">Ocean Cup Café & Kitchen<br>Seaside Boulevard, City Centre</div></div></div>
+        <div class="cinfo"><div class="cico">🕐</div><div><div class="clabel">Tides (Hours)</div><div class="cval">Mon–Thu: 9AM – 11PM<br>Fri–Sat: 9AM – 1AM · Sun: 10AM – 10PM</div></div></div>
+        <div class="cinfo"><div class="cico">📞</div><div><div class="clabel">Call the Shore</div><div class="cval">+92 (300) 000-0000<br>hello@oceancup.com</div></div></div>
+        <div class="cinfo"><div class="cico">🅿️</div><div><div class="clabel">Parking</div><div class="cval">Free parking for guests<br>Valet on weekends after 6PM</div></div></div>
+        <div class="social-row"><a href="#" class="soc">📸</a><a href="#" class="soc">🐦</a><a href="#" class="soc">📘</a><a href="#" class="soc">▶️</a></div>
+      </div>
+      <div class="rvr">
+        <div class="form-title">Reserve a Table</div>
+        <div class="form-sub">Drop into the deep — we'll hold your spot by the current.</div>
+        <div class="frow"><div class="fg"><input type="text" placeholder="Your Name"></div><div class="fg"><input type="tel" placeholder="Phone Number"></div></div>
+        <div class="fg"><input type="email" placeholder="Email Address"></div>
+        <div class="frow"><div class="fg"><input type="text" placeholder="Date (DD/MM/YYYY)"></div><div class="fg"><input type="text" placeholder="Time (e.g. 7:30 PM)"></div></div>
+        <div class="frow">
+          <div class="fg"><select><option value="" disabled selected>No. of Guests</option><option>1 Guest</option><option>2 Guests</option><option>3-4 Guests</option><option>5-6 Guests</option><option>7+</option></select></div>
+          <div class="fg"><select><option value="" disabled selected>Seating Area</option><option>Ocean Floor (Main)</option><option>Coral Corner</option><option>Tidal Terrace</option><option>Deep Booth</option></select></div>
+        </div>
+        <div class="fg"><textarea placeholder="Special requests, allergies, celebrations..."></textarea></div>
+        <button class="btn-primary" style="width:100%;border-radius:8px;padding:15px;" onclick="handleRes(this)"><span>🌊 Secure My Reservation</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-grid">
+      <div><div class="f-logo">Ocean <span>Cup</span></div><div class="f-tag">Where the deep meets the cup —<br>artisan café, ocean soul, endless depth.</div><div class="social-row"><a href="#" class="soc" style="width:36px;height:36px;">📸</a><a href="#" class="soc" style="width:36px;height:36px;">🐦</a><a href="#" class="soc" style="width:36px;height:36px;">📘</a></div></div>
+      <div class="footer-col"><h5>Navigate</h5><ul><li><a href="#about">About Us</a></li><li><a href="#signatures">Signature Drinks</a></li><li><a href="#depth-journey">Our Story</a></li><li><a href="#menu">Full Menu</a></li><li><a href="#atmos">Experience</a></li></ul></div>
+      <div class="footer-col"><h5>Menu</h5><ul><li><a href="#menu">Beverages</a></li><li><a href="#menu">OC Signature</a></li><li><a href="#menu">Desserts</a></li><li><a href="#specials">Specials</a></li><li><a href="#signatures">Oceanic Brews</a></li></ul></div>
+      <div class="footer-col"><h5>Hours</h5><ul><li><a href="#">Mon–Thu 9AM–11PM</a></li><li><a href="#">Fri–Sat 9AM–1AM</a></li><li><a href="#">Sunday 10AM–10PM</a></li><li><a href="#contact">Reserve a Table</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div class="f-copy">© 2025 Ocean Cup Café & Kitchen. All rights reserved.</div><div class="f-wave-badge">🌊 Crafted with the spirit of the sea</div></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
